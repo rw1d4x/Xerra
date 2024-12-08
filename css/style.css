@@ -1,0 +1,181 @@
+@font-face {
+    font-family: Montserrat;
+    src: url(../font/Montserrat-Regular.ttf); /*opgezocht op youtube want hij wou maar niet werken*/
+}
+
+/* chatgpt heeft mij hierbij geholpen omdat ik niet wist hoe ik die lijn nou moest we krijgen */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    background: linear-gradient(to bottom, rgba(106, 173, 83, 1), rgba(26, 77, 8, 0)); /* to bottom is van chatgpt voor de fade, de gradient had ik van een andere website */
+    padding: 20px 40px;
+    position: fixed;
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000; 
+}
+
+
+.toplogo .logo {
+    font-size: 2em;
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+}
+
+.logo {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* w3schools heeft mij hierbij geholpen */
+}
+
+.logo:hover {
+    transform: scale(1.1); /* w3schools heeft mij hierbij geholpen */
+}
+
+.topnav {
+    display: flex;
+    padding-right: 60px;
+}
+
+.topnav a {
+    text-decoration: none;
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+    font-size: 1.1em;
+    color: white;
+    padding: 5px 10px;
+    transition: color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* w3schools heeft mij hierbij geholpen */
+    
+}
+
+.topnav a:hover {
+    color: #045311;
+    transform: scale(1.1); /* w3schools heeft mij hierbij geholpen */
+
+}
+
+.home {
+    background: url(../images/charlesdeluvio-_4K7BwaHUGc-unsplash.jpg);
+    height: 100vh; /* van chatgpt want de foto wou maar niet correct zitten */
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
+    color: white; 
+    position: relative; 
+}
+
+
+.home-page {
+    position: relative;
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+
+}
+
+.home-page h2 {
+    font-size: 3em; 
+}
+
+.home-page p {
+ padding-bottom: 70 px;
+}
+
+.shop {
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+    padding-top: 40px;
+}
+
+.topshop h2 {
+    padding-left: 2em;
+    text-decoration: underline;
+    transition: transform 0.3s ease, box-shadow 0.3s ease
+}
+.topshop h2:hover {
+    transform: translateY(-5px);  /*chatgpt heeft me hiermee geholpen want ik wist niet hoe het naar boven zou komen */
+}
+
+.producten-stuk {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* w3schools heeft mij hierbij geholpen, en dit had u in de les laten zien dus ik dacht waarom niet! */
+    gap: 20px; /* w3schools heeft mij hierbij geholpen */
+    padding-left: 6em;
+    padding-right: 6em;
+}
+
+.product {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* w3schools heeft mij hierbij geholpen */
+}
+
+.producten-stuk img {   /* chatgpt heeft mij hierbij geholpen met andere bronnen, ik kreeg de foto maar niet klein genoeg. */
+    width: 100%; 
+    max-width: 150px;
+    height: auto; 
+    border-radius: 8px; 
+    transition: transform 0.3s ease; /* w3schools heeft mij hierbij geholpen */
+}
+
+.producten-stuk img:hover {
+    transform: scale(1.1); /* w3schools heeft mij hierbij geholpen */
+}
+
+.product:hover {    /*chatgpt heeft me hiermee geholpen want ik wist niet hoe het naar boven zou komen */
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(30, 104, 4, 0.456);
+  }
+
+.shop div a {
+    text-decoration: none; /* w3schools heeft mij hierbij geholpen */
+
+}
+
+.about {
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+    padding-top: 9em;
+    text-align: center;
+    
+}
+
+.topabout h2 {
+    font-size: 30px;
+
+}
+
+.contact {
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+    padding-top: 9em;
+    text-align: center;
+    align-items: center;
+}
+
+.contact form {
+    padding: 4px;
+    padding-left: 450px;
+    margin: 0;
+    max-width: 600px;
+    
+}
+
+.contact input, .contact textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 5px 0;
+    border: 0.5px solid;
+    border-radius: 5px;
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* w3schools heeft mij hierbij geholpen */
+  }
+
+
+
+.contact textarea:hover, .contact input:hover {    /*chatgpt heeft me hiermee geholpen want ik wist niet hoe het naar boven zou komen */
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(30, 104, 4, 0.456);
+  }
