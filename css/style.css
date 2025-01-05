@@ -1,17 +1,17 @@
-@font-face {
-    font-family: Montserrat;
-    src: url(../font/Montserrat-Regular.ttf); /*opgezocht op youtube want hij wou maar niet werken*/
-}
-
 /* chatgpt heeft mij hierbij geholpen omdat ik niet wist hoe ik die lijn nou moest we krijgen */
 body, html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+/*had dit voor de zekerheid er bij gedaan zodat ik zeker wist dat alles dezelfde font family had*/
+p,h1,h2,h3,h4,h5,h6,a {
+    font-family: Montserrat, Arial, Helvetica, sans-serif; 
 }
 
 .header {
-    background: linear-gradient(to bottom, rgba(106, 173, 83, 1), rgba(26, 77, 8, 0)); /* to bottom is van chatgpt voor de fade, de gradient had ik van een andere website */
+    background: linear-gradient(to bottom, rgba(106, 173, 83, 1), rgba(26, 77, 8, 0)); /*chatgpt heeft geholpen bij de header zodat het stil blijft, maar ook gekeken op canvas!*/
     padding: 20px 40px;
     position: fixed;
     width: 100%;
@@ -19,18 +19,14 @@ body, html {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 1000; 
-}
-
-
-.toplogo .logo {
-    font-size: 2em;
-    font-family: Montserrat, Arial, Helvetica, sans-serif;
-    letter-spacing: 1px;
+    z-index: 1000;
 }
 
 .logo {
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* w3schools heeft mij hierbij geholpen */
+    font-size: 2em;
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+    transition: transform 0.3s ease; /* w3schools heeft mij hierbij geholpen */
 }
 
 .logo:hover {
@@ -39,7 +35,8 @@ body, html {
 
 .topnav {
     display: flex;
-    padding-right: 60px;
+    gap: 20px;
+    padding-right: 5em;
 }
 
 .topnav a {
@@ -47,63 +44,42 @@ body, html {
     font-family: Montserrat, Arial, Helvetica, sans-serif;
     font-size: 1.1em;
     color: white;
-    padding: 5px 10px;
-    transition: color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* w3schools heeft mij hierbij geholpen */
-    
+    transition: color 0.3s ease, transform 0.3s ease; /* w3schools heeft mij hierbij geholpen */
 }
 
 .topnav a:hover {
     color: #045311;
     transform: scale(1.1); /* w3schools heeft mij hierbij geholpen */
-
 }
+
 
 .home {
-    background: url(../images/charlesdeluvio-_4K7BwaHUGc-unsplash.jpg);
-    height: 100vh; /* van chatgpt want de foto wou maar niet correct zitten */
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    text-align: center; 
-    color: white; 
-    position: relative; 
+    background: url(../images/charlesdeluvio-_4K7BwaHUGc-unsplash.jpg) no-repeat center center/cover; /*chatgpt heeft mij hierbij geholpen omdat de foto niet volledig liet zien, het was ingezoomd*/
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
 }
 
-
-.home-page {
-    position: relative;
-    font-family: Montserrat, Arial, Helvetica, sans-serif;
-
-}
-
-.home-page h2 {
-    font-size: 3em; 
-}
-
-.home-page p {
- padding-bottom: 70 px;
-}
 
 .shop {
     font-family: Montserrat, Arial, Helvetica, sans-serif;
-    padding-top: 40px;
+    padding: 80px 20px;
 }
 
-.topshop h2 {
-    padding-left: 2em;
+.shop h2 {
+    text-align: center;
     text-decoration: underline;
-    transition: transform 0.3s ease, box-shadow 0.3s ease
-}
-.topshop h2:hover {
-    transform: translateY(-5px);  /*chatgpt heeft me hiermee geholpen want ik wist niet hoe het naar boven zou komen */
 }
 
 .producten-stuk {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* w3schools heeft mij hierbij geholpen, en dit had u in de les laten zien dus ik dacht waarom niet! */
-    gap: 20px; /* w3schools heeft mij hierbij geholpen */
-    padding-left: 6em;
-    padding-right: 6em;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 40px auto;
+    padding: 0 10px;
 }
 
 .product {
@@ -114,68 +90,106 @@ body, html {
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* w3schools heeft mij hierbij geholpen */
 }
 
-.producten-stuk img {   /* chatgpt heeft mij hierbij geholpen met andere bronnen, ik kreeg de foto maar niet klein genoeg. */
-    width: 100%; 
-    max-width: 150px;
-    height: auto; 
-    border-radius: 8px; 
+.product img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
     transition: transform 0.3s ease; /* w3schools heeft mij hierbij geholpen */
 }
 
-.producten-stuk img:hover {
+.product img:hover {
     transform: scale(1.1); /* w3schools heeft mij hierbij geholpen */
 }
 
-.product:hover {    /*chatgpt heeft me hiermee geholpen want ik wist niet hoe het naar boven zou komen */
-    transform: translateY(-5px);
+.product:hover {
+    transform: translateY(-5px); /* w3schools heeft mij hierbij geholpen */
     box-shadow: 0 8px 16px rgba(30, 104, 4, 0.456);
-  }
-
-.shop div a {
-    text-decoration: none; /* w3schools heeft mij hierbij geholpen */
-
 }
+
 
 .about {
     font-family: Montserrat, Arial, Helvetica, sans-serif;
-    padding-top: 9em;
+    padding: 80px 20px;
     text-align: center;
-    
 }
 
-.topabout h2 {
-    font-size: 30px;
-
-}
 
 .contact {
     font-family: Montserrat, Arial, Helvetica, sans-serif;
-    padding-top: 9em;
+    padding: 80px 20px;
     text-align: center;
-    align-items: center;
 }
 
 .contact form {
-    padding: 4px;
-    padding-left: 450px;
-    margin: 0;
-    max-width: 600px;
-    
+    max-width: 400px;
+    margin: 0 auto;
 }
 
-.contact input, .contact textarea {
+.contact input, .contact textarea { /*chatgpt heeft mij hierbij geholpen om het zo klein mogelijk te houden en compact*/
     width: 100%;
     padding: 12px;
     margin: 5px 0;
-    border: 0.5px solid;
+    border: 0.5px solid #ccc;
     border-radius: 5px;
     font-family: Montserrat, Arial, Helvetica, sans-serif;
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* w3schools heeft mij hierbij geholpen */
-  }
+}
 
-
-
-.contact textarea:hover, .contact input:hover {    /*chatgpt heeft me hiermee geholpen want ik wist niet hoe het naar boven zou komen */
+.contact input:hover, .contact textarea:hover { /*chatgpt heeft mij geholpen het wat compacter te houden en netter*/
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(30, 104, 4, 0.456);
+}
+
+/*w3schools heeft mij hier volledig bij geholpen*/
+#knop {
+    display: none; 
+    position: fixed; 
+    bottom: 20px;
+    right: 30px;
+    z-index: 99; 
+    border: none;
+    outline: none; 
+    background-color:rgba(30, 104, 4, 0.456); 
+    color: white; 
+    cursor: pointer; 
+    padding: 15px; 
+    border-radius: 10px; 
+    font-size: 18px; 
+
   }
+  /*w3schools heeft mij hier volledig bij geholpen*/
+  #knop:hover {
+    background-color: #555; 
+  }
+
+/*chatgpt &w3schools hebben mij geholpen bij het gebruiken van media*/
+@media screen and (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+    }
+
+    .topnav {
+        flex-direction: row;
+        align-items: center;
+        padding: 15px;
+    }
+
+    .shop h2 {
+        font-size: 1.8em;
+    }
+
+    .producten-stuk {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .product {
+        padding: 15px;
+    }
+
+    .contact form {
+        padding: 10px;
+    }
+}
+
